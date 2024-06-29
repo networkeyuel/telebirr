@@ -11,7 +11,7 @@ from cryptography.hazmat.primitives.asymmetric.padding import PKCS1v15
 from . import utils
 
 
-class Telebirr:
+class NetworkEyuel:
     api = "http://196.188.120.3:10443/service-openup/toTradeWebPay"
 
     def __init__(self, app_id, app_key, public_key, notify_url, receive_name, return_url, short_code, subject,
@@ -88,7 +88,7 @@ class Telebirr:
         return json.loads(decrypted)
 
 
-class TelebirrSuperApp:
+class NetworkEyuelSuperApp:
     def __init__(self, short_code, app_key, app_secret, merchant_id, private_key, url):
         self.short_code = short_code
         self.app_key = app_key
