@@ -1,8 +1,8 @@
-from telebirr import TelebirrSuperApp
+from networkeyuel import networkeyuelSuperApp
 import random, uuid
 
 def main():
-    t = TelebirrSuperApp(
+    t = networkeyuelSuperApp(
         short_code='202333',
         app_key="ada42afe807a43759c99f5e0ef54b573",
         app_secret="0dd307bc81a3605f750b3ae38725f828",
