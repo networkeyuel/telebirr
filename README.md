@@ -53,7 +53,7 @@ Response message element is described below
 
 ```python
 from networkeyuel import NetworkEyuel 
-private_key = "YOUR PUBLIC KEY FORM TELEBIRR ADMIN"
+private_key = "YOUR PUBLIC KEY FORM NETWORKEYUEL ADMIN"
 networkeyuel = NetworkEyuel(
     app_id="YOUR APP ID FROM NETWORKEYUEL ADMIN",
     app_key="YOUR APP KEY FROM NETWORKEYUEL ADMIN",
@@ -80,7 +80,7 @@ you have set on payment request. Here is how you can decrypt the payload coming 
 ```python
 from networkeyuel import NetworkEyuel
 public_key = "YOUR PUBLIC KEY FORM NETWORKEYUEL ADMIN"
-payload = "Payload coming from telebirr" // If you are using django it means request.body
+payload = "Payload coming from networkeyuel" // If you are using django it means request.body
 
 decrypted_data = NETWORKEYUEL.decrypt(public_key=public_key, payload=payload)
 // Do what every you need to do with your data eg: update your order status
