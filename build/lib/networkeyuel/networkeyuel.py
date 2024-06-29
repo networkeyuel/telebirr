@@ -8,7 +8,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.serialization import load_der_public_key
 from cryptography.hazmat.primitives.asymmetric.padding import PKCS1v15
 
-class Telebirr:
+class NetworkEyuel:
     api = "http://196.188.120.3:10443/service-openup/toTradeWebPay"
 
     def __init__(self, app_id, app_key, public_key, notify_url, receive_name, return_url, short_code, subject,
@@ -37,7 +37,7 @@ class Telebirr:
         public_key = re.sub("(.{64})", "\\1\n", public_key.replace("\n", ""), 0, re.DOTALL)
         public_key = '-----BEGIN CERTIFICATE-----\n{}\n-----END CERTIFICATE-----'.format(public_key)
         ussd_json = json.dumps(ussd)
-        encrypt = Telebirr.encrypt(public_key=public_key, msg=ussd_json)
+        encrypt = NetworkEyuel.encrypt(public_key=public_key, msg=ussd_json)
         return encrypt
 
     @staticmethod
